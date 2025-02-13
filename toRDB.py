@@ -32,8 +32,8 @@ def create_llm(api_key, api_url, project_id):
 def get_image_urls():
     keyword = "경진대회 공모전"
     print(f"Searching for image URLs with keyword: {keyword}")
-    google_api_key = "AIzaSyAakKrTq1NikGxyEfX678VEytg8x25BEho"
-    google_cx = "461254d9dc19a4cf0"
+    google_api_key = ""
+    google_cx = ""
     url = f"https://www.googleapis.com/customsearch/v1?key={google_api_key}&cx={google_cx}&q={keyword}"
     try:
         r = requests.get(url, timeout=10)
@@ -187,9 +187,9 @@ def run_process():
         'database': 'competition',
         'connection_timeout': 180
     }
-    api_key = "YGbzIUg6KpNsg7WPz3YpcrhFiqS5AElruCqpEmhPGkN9"
-    api_url = "https://us-south.ml.cloud.ibm.com"
-    project_id = "5c7be186-19b4-43b1-8606-82ea24e1e840"
+    api_key = ""
+    api_url = ""
+    project_id = ""
     watson_model = create_llm(api_key, api_url, project_id)
     conn = None
     cursor = None
